@@ -16,26 +16,29 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
   const { title, description, href } = project;
 
-  const titleContent = <CardTitle>{title}</CardTitle>;
-
-  const headerContent = href ? (
-    <a href={href} target="_blank" rel="noopener noreferrer">
-      {titleContent}
-    </a>
-  ) : (
-    titleContent
-  );
-
-  return (
+  const cardContent = (
     <Card>
       <CardHeader>
-        {headerContent}
+        <CardTitle>{title}</CardTitle>
         <div className="flex justify-between">
-          <CardDescription>{description}</CardDescription>
+          {/* whitespace: pre-line  */}
+          <CardDescription className="
+            whitespace-pre-line
+          ">{description}</CardDescription>
         </div>
       </CardHeader>
     </Card>
   );
+
+  const content = href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {cardContent}
+    </a>
+  ) : (
+    cardContent
+  );
+
+  return content
 };
 
 export default ProjectCard;

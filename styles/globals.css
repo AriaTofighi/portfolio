@@ -78,10 +78,7 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  a {
-    width: fit-content;
-  }
-  a:hover {
+  a h3:hover {
     @apply text-primary underline;
   }
 }
