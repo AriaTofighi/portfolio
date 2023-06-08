@@ -1,18 +1,20 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Aria Tofighi",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "The portfolio of Aria Tofighi, a software developer based in Vancouver, Canada.",
   mainNav: [
     {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Projects",
+      href: "/#projects",
+    },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    github: "https://github.com/AriaTofighi",
   },
 }
