@@ -24,7 +24,7 @@ const projects: Project[] = [
 
 export default function IndexPage() {
   return (
-    <section className="container grid max-w-3xl items-center gap-12 pb-8 pt-6 md:py-10">
+    <section className="container grid max-w-3xl items-center gap-10 py-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-3xl font-extrabold  md:text-4xl">
           Aria Tofighi
