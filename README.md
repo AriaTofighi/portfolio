@@ -1,6 +1,6 @@
 # ariatofighi.com
 
-A portfolio website for me, Aria.
+A portfolio website for me, Aria Tofighi.
 
 ## Setup Locally
 
