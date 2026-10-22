@@ -4,7 +4,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 RUN npm install --global pnpm@12.3.4
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+# Keep the dependency tree flat for Next.js 15 build tracing.
+RUN pnpm install --frozen-lockfile --config.node-linker=hoisted
 COPY . .
 RUN pnpm build
 
